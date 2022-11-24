@@ -5,6 +5,8 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosNotifications } from "react-icons/io";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+// images
+import ax from "../assets/pro.jpg"
 const Nav = () => {
   const [hide, setHide] = useState(false);
   const [click, setClick] = useState(false);
@@ -57,11 +59,31 @@ const Nav = () => {
           </div>
           {/* profile details */}
           <div className={click ? `hidden` : `block`}>
+            {/* currently in */}
             <div>
               <h3>Currently in</h3>
               <div>
-                <img src=""/>
+                <img src={ax} alt="profile"/>
+                <h1>user</h1>
+                <p>personal</p>
+                <p>dani.jakook@gmail.com</p>
               </div>
+            </div>
+            {/* your account */}
+            <div>
+              <h1>add account</h1>
+              <div>convert to business</div>
+            </div>
+            {/* more option */}
+            <div>
+              <p>setting</p>
+              <p>tune your home feed</p>
+              <p>install the windows app</p>
+              <p>your privacy rights</p>
+              <p>get help</p>
+              <p>see terms of service</p>
+              <p>see privacy policy</p>
+              <p>log out</p>
             </div>
           </div>
         </div>
