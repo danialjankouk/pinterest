@@ -3,7 +3,7 @@ import { Route ,Routes , Link } from 'react-router-dom';
 import Nav from './components/Nav';
 const App = () => {
   return (
-    <div className='bg-[#FFFFFF] container mx-auto h-screen'>
+    <div className='bg-[#FFFFFF] h-screen'>
       <Nav/>
     </div>
   );
