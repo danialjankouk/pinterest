@@ -6,40 +6,38 @@ import { IoIosNotifications } from "react-icons/io";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 // images
-import ax from "../assets/pro.jpg"
+import ax from "../assets/pro.jpg";
+
 const Nav = () => {
-  const [hide, setHide] = useState(false);
-  const [click, setClick] = useState(false);
+  const [hide, setHide] = useState(true);
+  const [click, setClick] = useState(true);
   return (
-    <div className="w-full bg-white h-16 shadow-lg">
-      <nav className="flex items-center text-center">
+    <div className="bg-white h-16 shadow-lg flex justify-evenly items-center">
+      <nav className="flex justify-evenly items-center">
         <a href="/">
-          <BsPinterest />
+          <BsPinterest className="mr-10 text-red-600 text-2xl" />
         </a>
-        <a href="/">
+        <a href="/" className="mr-10">
           <h1>Home</h1>
         </a>
         {/* select list */}
-        <div>
-          <div
-            className="cursor-pointer flex flex-row"
-            onClick={() => setHide(!hide)}
-          >
-            <h1>Create</h1>
-            <p>
-              <BiChevronDown />
-            </p>
-          </div>
-          <div className={hide ? `hidden` : "block"}>
-            <p>Create Idea Pin</p>
-            <p>Create Pin</p>
-          </div>
+        <div
+          className={`${
+            hide ? `` : ``
+          } cursor-pointer flex mr-10 flex-row rounded-xl bg-slate-50 items-center shadow-sm`}
+          onClick={() => setHide(!hide)}
+        >
+          <select className={`cursor-pointer bg-slate-50 rounded-xl`}>
+            <option>Create</option>
+            <option>Create Idea Pin</option>
+            <option>Create Pin</option>
+          </select>
         </div>
         {/* searchbar */}
-        <div className="flex flex-row border-solid cursor-text border-2 active:border-blue-600">
+        <div className="flex mr-10 flex-row border-solid cursor-text border-2 active:border-blue-600">
           <input
             type="search"
-            className="border-none focus:border-none active:border-none"
+            className="border-none md:w-4/5 md:block hidden focus:border-none active:border-none"
             placeholder="Search"
           />
           <i>
@@ -48,22 +46,21 @@ const Nav = () => {
         </div>
         {/* stuff */}
         <div className="flex">
-          <IoIosNotifications />
-          <BsFillChatDotsFill />
-          <div className="flex">
-            <CgProfile />
-            <BiChevronDown
-              onClick={() => setClick(!click)}
-              className="cursor-pointer"
+          <IoIosNotifications className={`${click ? `mr-10 text-slate-500 cursor-pointer text-2xl mt-2` : `flex mt-[27rem] mr-10 text-slate-500 cursor-pointer text-2xl`}`} />
+          <BsFillChatDotsFill className={`${click ? `mr-10 text-slate-500 cursor-pointer text-2xl mt-2` : `flex mt-[27rem] mr-10 text-slate-500 cursor-pointer text-2xl`}`} />
+          <div onClick={() => setClick(!click)} className={`${click ? `` : `flex mt-[27rem]`}`}>
+            <img
+              src={ax}
+              className="w-10 h-10 rounded-full text-slate-500 cursor-pointer text-2xl"
             />
           </div>
           {/* profile details */}
-          <div className={click ? `hidden` : `block`}>
+          <div className={click ? `hidden` : `block mt-[30rem]`}>
             {/* currently in */}
             <div>
               <h3>Currently in</h3>
               <div>
-                <img src={ax} alt="profile"/>
+                <img src={ax} alt="profile" className="w-20"/>
                 <h1>user</h1>
                 <p>personal</p>
                 <p>dani.jakook@gmail.com</p>
