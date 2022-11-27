@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { BsPinterest } from "react-icons/bs";
-import { BiChevronDown } from "react-icons/bi";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosNotifications } from "react-icons/io";
 import { BsFillChatDotsFill } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
 // images
 import ax from "../assets/pro.jpg";
 
@@ -34,10 +32,10 @@ const Nav = () => {
           </select>
         </div>
         {/* searchbar */}
-        <div className="flex mr-10 flex-row border-solid cursor-text border-2 active:border-blue-600">
+        <div className="flex mr-10 flex-row rounded-xl border-solid cursor-text border-2 active:border-blue-600">
           <input
             type="search"
-            className="border-none md:w-4/5 md:block hidden focus:border-none active:border-none"
+            className="border-none md:w-[40rem] md:block hidden focus:border-none active:border-none"
             placeholder="Search"
           />
           <i>
@@ -55,7 +53,7 @@ const Nav = () => {
             />
           </div>
           {/* profile details */}
-          <div className={click ? `hidden` : `block mt-[30rem]`}>
+          <div className={click ? `hidden` : `block mt-[30rem] `}>
             {/* currently in */}
             <div>
               <h3>Currently in</h3>
