@@ -9,6 +9,10 @@ import ax from "../assets/pro.jpg";
 const Nav = () => {
   const [hide, setHide] = useState(true);
   const [click, setClick] = useState(true);
+  const [change , setChange] = useState("")
+  const changeHandler = (e)=>{
+    setChange(e.target.value)
+  }
   return (
     <div className="bg-white h-16 shadow-lg flex justify-evenly items-center">
       <nav className="flex justify-evenly items-center">
@@ -37,6 +41,7 @@ const Nav = () => {
             type="search"
             className="border-none md:w-[40rem] md:block hidden focus:border-none active:border-none"
             placeholder="Search"
+            onChange={changeHandler}
           />
           <i>
             <AiOutlineSearch />
