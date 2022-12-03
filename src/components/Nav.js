@@ -14,7 +14,7 @@ const Nav = () => {
     setChange(e.target.value)
   }
   return (
-    <div className="bg-white h-16 shadow-lg flex justify-evenly items-center">
+    <div className="bg-white h-16 fixed -mt-5 w-full shadow-lg flex justify-evenly items-center">
       <nav className="flex justify-evenly items-center">
         <a href="/">
           <BsPinterest className="mr-10 text-red-600 text-2xl" />
@@ -48,7 +48,7 @@ const Nav = () => {
           </i>
         </div>
         {/* stuff */}
-        <div className="flex">
+        <div className="flex relative bg-white">
           <IoIosNotifications className={`${click ? `mr-10 text-slate-500 cursor-pointer text-2xl mt-2` : `flex mt-[27rem] mr-10 text-slate-500 cursor-pointer text-2xl`}`} />
           <BsFillChatDotsFill className={`${click ? `mr-10 text-slate-500 cursor-pointer text-2xl mt-2` : `flex mt-[27rem] mr-10 text-slate-500 cursor-pointer text-2xl`}`} />
           <div onClick={() => setClick(!click)} className={`${click ? `` : `flex mt-[27rem]`}`}>
