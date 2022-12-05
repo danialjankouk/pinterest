@@ -15,7 +15,7 @@ const Landing = () => {
       {data.map((img)=>{
         return(
           <div key={img.id} className="flex h-[20rem] p-1 mt-10 flex-col justify-around">
-            <img src={img.userImageURL} alt={img.tags} className={`rounded-xl`}/>  
+            <img src={img.userImageURL} alt={img.tags} className={`rounded-xl cursor-zoom-in hover:brightness-50`}/>  
             <p>{img.user}</p>
           </div>
         )
