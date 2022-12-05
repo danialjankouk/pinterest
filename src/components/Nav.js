@@ -5,7 +5,8 @@ import { IoIosNotifications } from "react-icons/io";
 import { BsFillChatDotsFill } from "react-icons/bs";
 // images
 import ax from "../assets/pro.jpg";
-
+//css
+import "./nav.css"
 const Nav = () => {
   const [hide, setHide] = useState(true);
   const [click, setClick] = useState(true);
@@ -39,16 +40,16 @@ const Nav = () => {
           </select>
         </div>
         {/* searchbar */}
-        <div className="flex mr-10 focus:ring-4 flex-row rounded-xl border-solid cursor-text border-2 active:border-blue-600">
-          <input
-            type="search"
-            className="border-none md:w-[40rem] md:block hidden focus:border-none active:border-none"
-            placeholder="Search"
-            onChange={changeHandler}
-          />
+        <div className="flex bg-slate-300 mr-10 focus:ring-4 flex-row rounded-xl border-solid cursor-text border-2 active:border-blue-600">
           <i>
             <AiOutlineSearch />
           </i>
+          <input
+            type="search"
+            className="border-none md:w-[50rem] md:block hidden focus:border-none active:border-none"
+            placeholder="Search"
+            onChange={changeHandler}
+          />
         </div>
         <IoIosNotifications
           className={`${
