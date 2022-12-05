@@ -100,14 +100,14 @@ const Nav = () => {
             {/* more option */}
             <h6 className="font-light text-sm text-gray-700">More option</h6>
             <div>
-              <p>setting</p>
-              <p>tune your home feed</p>
-              <p>install the windows app</p>
-              <p>your privacy rights</p>
-              <p>get help</p>
-              <p>see terms of service</p>
-              <p>see privacy policy</p>
-              <p>log out</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">setting</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">tune your home feed</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">install the windows app</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">your privacy rights</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">get help</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">see terms of service</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">see privacy policy</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">log out</p>
             </div>
           </div>
         </div>
