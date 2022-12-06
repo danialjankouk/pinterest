@@ -6,7 +6,7 @@ import { BsFillChatDotsFill } from "react-icons/bs";
 // images
 import ax from "../assets/pro.jpg";
 //css
-import "./nav.css"
+import "./nav.css";
 const Nav = () => {
   const [hide, setHide] = useState(true);
   const [click, setClick] = useState(true);
@@ -33,15 +33,15 @@ const Nav = () => {
           } cursor-pointer flex mr-12 flex-row rounded-xl bg-slate-50 items-center shadow-sm`}
           onClick={() => setHide(!hide)}
         >
-          <select className={`cursor-pointer bg-slate-50 rounded-xl`}>
+          <select>
             <option>Create</option>
             <option>Create Idea Pin</option>
             <option>Create Pin</option>
           </select>
         </div>
         {/* searchbar */}
-        <div className="flex bg-slate-300 mr-10 focus:ring-4 flex-row rounded-xl border-solid cursor-text border-2 active:border-blue-600">
-          <i>
+        <div className="flex bg-[#E9E9E9] p-1 mr-10 flex-row rounded-2xl border-solid cursor-text border-2 active:border-blue-600">
+          <i className="text-[#767676] font-bold text-xl pr-2 items-center">
             <AiOutlineSearch />
           </i>
           <input
@@ -84,7 +84,11 @@ const Nav = () => {
             <div>
               <h6 className="font-light text-sm text-gray-700">Currently in</h6>
               <div className="flex mt-2 hover:cursor-pointer hover:bg-gray-200 rounded-md p-2 w-full">
-                <img src={ax} alt="profile" className="w-16 h-16 rounded-full" />
+                <img
+                  src={ax}
+                  alt="profile"
+                  className="w-16 h-16 rounded-full"
+                />
                 <div className="pl-2 font-light text-sm text-gray-700">
                   <h1 className="font-bold text-black">dani.j</h1>
                   <p>personal</p>
@@ -101,14 +105,30 @@ const Nav = () => {
             {/* more option */}
             <h6 className="font-light text-sm text-gray-700">More option</h6>
             <div>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">setting</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">tune your home feed</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">install the windows app</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">your privacy rights</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">get help</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">see terms of service</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">see privacy policy</p>
-              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">log out</p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                setting
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                tune your home feed
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                install the windows app
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                your privacy rights
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                get help
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                see terms of service
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                see privacy policy
+              </p>
+              <p className="hover:bg-gray-200 cursor-pointer rounded-md p-1">
+                log out
+              </p>
             </div>
           </div>
         </div>
