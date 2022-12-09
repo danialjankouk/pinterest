@@ -1,15 +1,15 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav";
 import Landing from "./components/Landing";
+import Login from "./components/Login";
 const App = () => {
   return (
     <div className="bg-[#FFFFFF] h-screen">
-      {/* navbar */}
-      <Nav />
+      {/* Landing */}
       <Routes>
-        {/* Landing */}
-        <Route path="/" element={<Landing />} />
+        <Route path="/dashboard" element={<Landing />} />
+        {/* Login */}
+        <Route path="/" element={<Login />} />
       </Routes>
     </div>
   );

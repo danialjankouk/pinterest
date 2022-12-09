@@ -11,6 +11,7 @@ const Nav = () => {
   const [hide, setHide] = useState(true);
   const [click, setClick] = useState(true);
   const [change, setChange] = useState("");
+  const [opt , setOpt] = useState("create")
   const changeHandler = (e) => {
     setChange(e.target.value);
   };
@@ -33,10 +34,10 @@ const Nav = () => {
           } cursor-pointer flex mr-12 flex-row rounded-xl bg-slate-50 items-center shadow-sm`}
           onClick={() => setHide(!hide)}
         >
-          <select>
-            <option>Create</option>
-            <option>Create Idea Pin</option>
-            <option>Create Pin</option>
+          <select value={opt} onChange={(e)=>setOpt(e.target.value)}>
+            <option value="create">Create</option>
+            <option value="create1">Create Idea Pin</option>
+            <option value="pin">Create Pin</option>
           </select>
         </div>
         {/* searchbar */}
@@ -46,6 +47,7 @@ const Nav = () => {
           </i>
           <input
             type="search"
+            value={change}
             className="border-none md:w-[50rem] md:block hidden focus:border-none active:border-none"
             placeholder="Search"
             onChange={changeHandler}
