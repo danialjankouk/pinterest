@@ -11,7 +11,7 @@ const Nav = () => {
   const [hide, setHide] = useState(true);
   const [click, setClick] = useState(true);
   const [change, setChange] = useState("");
-  const [opt , setOpt] = useState("create")
+  const [opt, setOpt] = useState("create");
   const changeHandler = (e) => {
     setChange(e.target.value);
   };
@@ -34,7 +34,7 @@ const Nav = () => {
           } cursor-pointer flex mr-12 flex-row rounded-xl bg-slate-50 items-center shadow-sm`}
           onClick={() => setHide(!hide)}
         >
-          <select value={opt} onChange={(e)=>setOpt(e.target.value)}>
+          <select value={opt} onChange={(e) => setOpt(e.target.value)}>
             <option value="create">Create</option>
             <option value="create1">Create Idea Pin</option>
             <option value="pin">Create Pin</option>
