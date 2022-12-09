@@ -14,7 +14,7 @@ const Landing = () => {
   return (
     <>
       <Nav />
-      <div className="grid grid-cols-6 gap-4 mt-5">
+      <div className="grid grid-cols-6 gap-4 relative z-10 mt-5">
         {data.length ? (
           data.map((img) => {
             return (
